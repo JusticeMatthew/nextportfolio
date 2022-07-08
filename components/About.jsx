@@ -6,8 +6,9 @@ const About = () => {
   return (
     <div
       id='about'
-      className='w-full h-[85vh] flex justify-center items-center'
+      className='w-full h-[85vh] flex justify-center items-center flex-col'
     >
+      <h1 className='text-2xl p-10 px-32 border-b-[1px] mb-16'>About Me</h1>
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -18,7 +19,7 @@ const About = () => {
           alt='Matthew Justice'
           width='250'
           height='250'
-          className='rounded-lg'
+          className='rounded-md'
         />
         <div className='flex justify-center items-center flex-col'>
           <p className='text-center mb-8'>
@@ -33,7 +34,7 @@ const About = () => {
               transition: { duration: 0.3 },
             }}
             type='button'
-            className='bg-green inline-block text-lg rounded-full text-white px-8 py-3 cursor-pointer'
+            className='bg-green inline-block text-lg rounded-md text-white px-8 py-2 cursor-pointer'
           >
             <a
               href='https://docs.google.com/document/d/1-pl74vYx-sBlMQB3HYjuahthGufq4oMP7H0imVhgztI/edit?usp=sharing'

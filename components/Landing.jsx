@@ -34,7 +34,7 @@ const Landing = () => {
         <motion.h1
           animate={{ opacity: [0, 1] }}
           transition={{ duration: 0.5, delay: 1 }}
-          className='text-8xl mb-10'
+          className='text-8xl mb-10 font-semibold'
         >
           Im Matthew
         </motion.h1>

@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <div className='container mx-auto px-2 mb-8'>
       <Head>
-        <title>Create Next App</title>
+        <title>Matthew Justice</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 

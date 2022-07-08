@@ -5,9 +5,13 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
-    colors: {
-      green: '#15db95',
+    extend: {
+      colors: {
+        green: '#15db95',
+      },
+      backgroundImage: {
+        trees: "url('/public/trees.jpg')",
+      },
     },
   },
   plugins: [],
