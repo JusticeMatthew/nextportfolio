@@ -10,7 +10,7 @@ const WorkCard = ({ img, description, github, projectLink }) => {
         className='object-top h-20 w-full rounded-t-md object-cover'
       />
       <div className='h-44'>
-        <p className='p-4 text-sm'>{description}</p>
+        <p className='p-4 text-sm mt-4 mx-4'>{description}</p>
       </div>
       <div>
         <motion.button

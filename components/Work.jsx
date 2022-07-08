@@ -14,7 +14,7 @@ const Work = () => {
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
-        className='grid grid-cols-2 gap-4 text-center'
+        className='grid sm:grid-cols-1 md:grid-cols-2 gap-4 text-center'
       >
         {projects.map((project, index) => (
           <WorkCard
