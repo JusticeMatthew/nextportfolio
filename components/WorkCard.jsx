@@ -1,42 +1,47 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const WorkCard = ({ img, description, github, projectLink }) => {
+const WorkCard = ({ img, description, github, projectLink, name }) => {
   return (
-    <div className='h-80 w-80 flex justify-start items-center flex-col bg-white/10 rounded-md'>
+    <div className='h-64 w-[800px] flex justify-start items-center bg-white/10 rounded-sm bg-papyrus my-10'>
       <img
         src={img}
         alt='budbud'
-        className='object-top h-20 w-full rounded-t-md object-cover'
+        className='object-top h-80 w-80 rounded-sm object-cover'
       />
-      <div className='h-44'>
-        <p className='p-4 text-sm mt-4 mx-4'>{description}</p>
-      </div>
-      <div>
-        <motion.button
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.3 },
-          }}
-          type='button'
-          className='bg-green inline-block text-lg rounded-md text-white px-2 p-1 cursor-pointer mx-2'
-        >
-          <a href={github} target='_blank'>
-            Github
-          </a>
-        </motion.button>
-        <motion.button
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.3 },
-          }}
-          type='button'
-          className='bg-green inline-block text-lg rounded-md text-white px-2 py-1 cursor-pointer mx-2'
-        >
-          <a href={projectLink} target='_blank'>
-            Project
-          </a>
-        </motion.button>
+      <div className='flex justify-center items-center flex-col'>
+        <h1 className='text-2xl'>{name}</h1>
+        <div className='h-32'>
+          <p className='p-4 text-sm mx-10 text-gray-300 text-center'>
+            {description}
+          </p>
+        </div>
+        <div>
+          <motion.button
+            whileHover={{
+              y: -3,
+              transition: { duration: 0.3 },
+            }}
+            type='button'
+            className='border-black bg-[#1f1f1f] inline-block text-md rounded-sm text-white px-3 p-2 cursor-pointer mx-4'
+          >
+            <a href={projectLink} target='_blank'>
+              Project
+            </a>
+          </motion.button>
+          <motion.button
+            whileHover={{
+              y: -3,
+              transition: { duration: 0.3 },
+            }}
+            type='button'
+            className='border-[#1f1f1f] bg-black border-2 inline-block text-md rounded-sm text-white px-3 p-2 cursor-pointer mx-4'
+          >
+            <a href={github} target='_blank'>
+              Github
+            </a>
+          </motion.button>
+        </div>
       </div>
     </div>
   );

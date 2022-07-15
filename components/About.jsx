@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div
       id='about'
-      className='w-full h-[85vh] flex justify-center items-center flex-col'
+      className='w-full h-[100vh] md:h-[85vh] flex justify-center items-center flex-col'
     >
       <h1 className='text-2xl p-10 px-32 border-b-[1px] mb-16'>About Me</h1>
       <motion.div

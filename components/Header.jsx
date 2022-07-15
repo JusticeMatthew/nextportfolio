@@ -12,26 +12,19 @@ const Header = () => {
     <motion.div
       animate={{ opacity: [0, 1] }}
       transition={{ duration: 0.5 }}
-      className='backdrop-blur-md w-full fixed p-8 z-10'
+      className='backdrop-blur-md w-full fixed py-4 px-8 z-10  flex justify-evenly items-center'
     >
-      <Link
-        activeClass='active'
-        to='home'
-        spy={true}
-        smooth={true}
-        duration={500}
-        offset={-100}
-      >
+      <Link to='home' smooth={true} duration={500} offset={-100}>
         <span className='cursor-pointer font-bold text-4xl uppercase'>
           <span className='text-green'>M.</span>Justice
         </span>
       </Link>
 
-      <div className='flex justify-between items-center self-end float-right uppercase'>
-        {['home', 'about', 'work', 'contact'].map((item, index) => (
+      <div className='flex justify-between items-center float-right uppercase'>
+        {['home', 'work', 'about', 'contact'].map((item, index) => (
           <div
             key={index}
-            className='px-2 flex flex-col justify-center items-center hover:text-green transition ease duration-500 cursor-pointer'
+            className='pl-8 flex flex-col justify-center items-center hover:text-green transition ease duration-500 cursor-pointer'
           >
             <Link
               activeClass='active'
@@ -39,7 +32,6 @@ const Header = () => {
               spy={true}
               smooth={true}
               duration={500}
-              offset={-100}
             >
               {item}
             </Link>

@@ -10,7 +10,7 @@ module.exports = {
         green: '#15db95',
       },
       backgroundImage: {
-        trees: "url('/public/trees.jpg')",
+        papyrus: "url('/papyrus-dark.webp')",
       },
     },
   },
