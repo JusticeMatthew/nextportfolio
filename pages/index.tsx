@@ -5,13 +5,13 @@ import { Landing, About, Work, Contact } from '../components';
 
 const Home: NextPage = () => {
   return (
-    <div className='mx-auto'>
+    <div className="mx-auto">
       <Head>
         <title>Matthew Justice</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className='w-full'>
+      <div className="w-full">
         <Landing />
         <Work />
         <About />
