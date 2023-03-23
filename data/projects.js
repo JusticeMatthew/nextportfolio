@@ -4,7 +4,7 @@ const projects = [
     alt: 'budbud logo',
     name: 'Hardstuck',
     name2: '',
-    description: `A gaming organization primarily focused on Guild Wars 2. Interacting with the Twitch & Guild Wars 2 API's it also has a robust template system allowing for rapid page creation by moderators.`,
+    description: `A gaming organization primarily focused on Guild Wars 2. The website uses the Twitch & Guild Wars 2 API's and has a robust template system allowing for rapid page creation by moderators.`,
     github: 'https://github.com/HardstuckGuild',
     projectLink: 'https://hardstuck.gg/',
   },

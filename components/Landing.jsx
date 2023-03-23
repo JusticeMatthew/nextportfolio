@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
+import Lottie from 'lottie-react';
+
+import scrollDown from '../constants/scrollDown.json';
 
 const hello = [
   { letter: 'h', y: [-100, 0], duration: 0.3 },
@@ -79,6 +82,34 @@ const Landing = () => {
           </Link>
         </motion.div>
       </div>
+
+      <motion.div
+        initial={{
+          scaleY: 0,
+          transformOrigin: '0% 20%',
+          style: {
+            bottom: '0px',
+            position: 'absolute',
+          },
+        }}
+        animate={{ scaleY: 1 }}
+        transition={{ duration: 0.4, delay: 1.3 }}
+        className="w-32 h-32 absolute bottom-0"
+      >
+        <Link
+          to="projects"
+          spy={true}
+          smooth={true}
+          duration={500}
+          className="w-full flex justify-center"
+        >
+          <Lottie
+            animationData={scrollDown}
+            loop={true}
+            className="absolute bottom-0 cursor-pointer mb-8"
+          />
+        </Link>
+      </motion.div>
     </div>
   );
 };
