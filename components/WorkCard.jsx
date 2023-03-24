@@ -7,52 +7,53 @@ const WorkCard = ({
   github,
   projectLink,
   name,
-  name2,
   alt,
+  stack,
 }) => {
   return (
-    <div className="h-72 md:w-[775px] w-[350px] flex justify-start items-center bg-white/10 rounded-sm bg-papyrus my-10">
+    <div className="w-[350px] h-[475px] bg-[#0f0f0f] border-2 border-black/0 hover:border-green rounded-3xl flex flex-col items-center justify-evenly">
       <img
         src={img}
         alt={alt}
-        className="object-top md:h-80 md:w-80 h-24 w-24 rounded-sm object-cover brightness-50 hover:brightness-100 transition duration-150 ml-[-20px] mt-[-20px] self-start absolute md:static"
+        className="w-24 h-24 rounded-full border-2 border-whitesmoke"
       />
-      <div className="flex md:justify-center justify-evenly items-center flex-col sm:h-72 md:h-72 h-72">
-        <div className="text-center">
-          <h1 className="text-2xl">{name}</h1>
-          <h1 className="text-2xl">{name2}</h1>
-        </div>
-        <div className="md:h-32 h-24">
-          <p className="md:p-4 p-2 md:text-sm text-xs md:mx-10 mx-4 text-gray-300 text-center">
-            {description}
-          </p>
-        </div>
-        <div>
-          <a href={projectLink} target="_blank">
-            <motion.button
-              whileHover={{
-                y: -3,
-                transition: { duration: 0.1 },
-              }}
-              type="button"
-              className="border-black bg-[#1f1f1f] inline-block text-md rounded-sm text-white px-3 p-2 cursor-pointer mx-4 hover:border-solid hover:border-b-2 hover:border-green"
-            >
-              Project
-            </motion.button>
-          </a>
-          <a href={github} target="_blank">
-            <motion.button
-              whileHover={{
-                y: -3,
-                transition: { duration: 0.1 },
-              }}
-              type="button"
-              className="border-[#1f1f1f] bg-black border-2 inline-block text-md rounded-sm text-white px-3 p-2 cursor-pointer mx-4 hover:border-solid hover:border-b-2 hover:border-b-green"
-            >
-              GitHub
-            </motion.button>
-          </a>
-        </div>
+      <h1 className="text-3xl">{name}</h1>
+      <div className="flex justify-center items-center w-full">
+        {stack.map((tech, index) => (
+          <div
+            key={index}
+            className="flex justify-center items-center bg-green/30 w-auto h-6 mx-[6px] rounded border-2 border-green cursor-default"
+          >
+            <p className="text-[10px] px-2 text-green font-bold">{tech}</p>
+          </div>
+        ))}
+      </div>
+      <p className="text-xs mx-8 text-center">{description}</p>
+      <div className="flex justify-center items-center">
+        <a href={projectLink} target="_blank" className="w-full">
+          <motion.button
+            whileHover={{
+              y: -3,
+              transition: { duration: 0.1 },
+            }}
+            type="button"
+            className="bg-[#1f1f1f] inline-block text-md rounded-sm text-white px-3 p-2 cursor-pointer mx-4 border-b-2 border-green"
+          >
+            Project
+          </motion.button>
+        </a>
+        <a href={github} target="_blank">
+          <motion.button
+            whileHover={{
+              y: -3,
+              transition: { duration: 0.1 },
+            }}
+            type="button"
+            className="border-[#1f1f1f] bg-black border-2 inline-block text-md rounded-sm text-white px-3 p-2 cursor-pointer mx-4"
+          >
+            GitHub
+          </motion.button>
+        </a>
       </div>
     </div>
   );
