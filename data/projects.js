@@ -9,7 +9,7 @@ const projects = [
     stack: ['JavaScript', 'WordPress', 'MySQL'],
   },
   {
-    img: '/budbud.jpg',
+    img: '/budbudbrain.jpg',
     alt: 'budbud app',
     name: 'BudBud',
     description: `BudBud is an app I designed to assist medical marijuana patients with tracking information about their medicine. During the course of building
@@ -25,7 +25,7 @@ const projects = [
     description: `Designed and developed a basic react website for a local small business. I utilized Tailwind CSS for all of the styling and took advantage of AWS for all hosting and DNS requirements.`,
     github: 'https://github.com/JusticeMatthew/BCpestcontrol',
     projectLink: 'https://www.bandcpestcontrol.com/',
-    stack: ['React', 'Tailwind CSS'],
+    stack: ['React', 'Tailwind', 'AWS'],
   },
 ];
 

@@ -65,7 +65,7 @@ const Landing = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="bg-green text-black px-6 py-2 m-4 rounded-sm font-bold text-md hover:border-green hover:text-white hover:bg-black  hover:outline outline-green cursor-pointer"
+            className="bg-green text-black px-6 py-2 m-4 rounded-sm font-bold text-md hover:border-green hover:text-white hover:bg-black border-black/0 hover:border-green border-2 cursor-pointer"
           >
             My Work
           </Link>
@@ -92,23 +92,33 @@ const Landing = () => {
             position: 'absolute',
           },
         }}
-        animate={{ scaleY: 1 }}
-        transition={{ duration: 0.4, delay: 1.3 }}
-        className="w-32 h-32 absolute bottom-0"
+        animate={{ scaleY: 1, transition: { duration: 0.4, delay: 1.3 } }}
+        className="w-32 h-32 absolute bottom-0 flex justify-center items-end"
       >
-        <Link
-          to="projects"
-          spy={true}
-          smooth={true}
-          duration={500}
-          className="w-full flex justify-center"
+        <motion.div
+          whileHover={{
+            y: [0, -5, 0],
+            transition: {
+              duration: 1,
+              repeat: Infinity,
+            },
+          }}
+          className="w-1/2 h-1/2 absolute"
         >
-          <Lottie
-            animationData={scrollDown}
-            loop={true}
-            className="absolute bottom-0 cursor-pointer mb-8"
-          />
-        </Link>
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="w-full flex justify-center"
+          >
+            <Lottie
+              animationData={scrollDown}
+              loop={true}
+              className="absolute bottom-0 cursor-pointer mb-8"
+            />
+          </Link>
+        </motion.div>
       </motion.div>
     </div>
   );

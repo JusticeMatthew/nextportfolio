@@ -8,14 +8,12 @@ const Work = () => {
   return (
     <div
       id="projects"
-      className="w-full min-h-[100vh] flex justify-center items-center flex-col mb-32"
+      className="w-full min-h-[100vh] flex justify-center items-around"
     >
-      <h1 className="text-2xl mb-4 mt-20">Projects</h1>
-      <div className="w-12 h-[4px] bg-green rounded mb-20 border-2 border-green" />
       <motion.div
         whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 1 }}
-        className="flex justify-center items-center flex-wrap gap-10"
+        transition={{ duration: 0.7 }}
+        className="flex justify-center items-center flex-wrap gap-10 my-32 overflow-hidden w-full"
       >
         {projects.map((project, index) => (
           <WorkCard
@@ -29,6 +27,14 @@ const Work = () => {
             stack={project.stack}
           />
         ))}
+        <div className="absolute w-full h-full overflow-hidden flex items-center justify-center flex-col z-0 cursor-default invisible lg:visible lg:max-[1146px]:invisible">
+          <p className="text-[22rem] opacity-[0.04] text-gray-500 font-bold">
+            PROJECTS
+          </p>
+          <p className="text-[22rem] opacity-[0.04] text-gray-500 font-bold">
+            PROJECTS
+          </p>
+        </div>
       </motion.div>
     </div>
   );

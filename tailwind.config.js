@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         green: '#15db95',
+        midGray: '#1f1f1f',
       },
       backgroundImage: {
         papyrus: "url('/papyrus-dark.webp')",
