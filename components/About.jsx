@@ -36,7 +36,7 @@ const About = () => {
               href="https://docs.google.com/document/d/1-pl74vYx-sBlMQB3HYjuahthGufq4oMP7H0imVhgztI/edit?usp=sharing"
               target="_blank"
             >
-              <button className="bg-green text-black px-6 py-2 m-4 rounded-sm font-bold text-md hover:border-green hover:text-white hover:bg-black  hover:outline outline-green cursor-pointer">
+              <button className="bg-green text-black px-6 py-2 m-4 rounded-sm font-bold text-md border-green border-2 hover:text-white hover:bg-black cursor-pointer">
                 Resume
               </button>
             </a>

@@ -18,18 +18,18 @@ const WorkCard = ({
           alt={alt}
           className="w-24 h-24 rounded-full border-2 border-gray-400 my-8"
         />
-        <h1 className="text-3xl mb-8">{name}</h1>
-        <p className="text-xs mx-8 mb-4 text-center">{description}</p>
-        <div className="flex justify-center items-end w-auto h-auto flex-col bottom absolute top-6 right-[-15px]">
+        <h1 className="text-3xl mb-3">{name}</h1>
+        <div className="flex justify-center items-center w-auto h-auto mb-4">
           {stack.map((tech, index) => (
             <div
               key={index}
-              className="flex justify-center items-center bg-black w-auto h-6 my-[2px] rounded border-2 border-black cursor-default"
+              className="flex justify-center items-center bg-black w-auto h-6 rounded border-2 border-green mx-1 cursor-default"
             >
               <p className="text-[10px] px-2 text-green font-bold">{tech}</p>
             </div>
           ))}
         </div>
+        <p className="text-xs mx-8 mb-4 text-center">{description}</p>
       </div>
       <div className="flex justify-center items-center mb-8">
         <a href={projectLink} target="_blank" className="w-full">
@@ -39,7 +39,7 @@ const WorkCard = ({
               transition: { duration: 0.1 },
             }}
             type="button"
-            className="bg-midGray inline-block text-md rounded-sm text-whitesmoke px-3 p-2 cursor-pointer mx-4 border-2 border-b-green border-midGray"
+            className="bg-midGray inline-block text-md rounded-sm text-whitesmoke px-3 p-2 cursor-pointer mx-4 border-2 border-midGray hover:text-green hover:border-b-green"
           >
             Project
           </motion.button>
@@ -51,7 +51,7 @@ const WorkCard = ({
               transition: { duration: 0.1 },
             }}
             type="button"
-            className="border-midGray bg-black border-2 inline-block text-md rounded-sm text-white px-3 p-2 cursor-pointer mx-4 hover:border-b-green"
+            className="border-midGray bg-black border-2 inline-block text-md rounded-sm text-white px-3 p-2 cursor-pointer mx-4 hover:border-b-green hover:text-green"
           >
             GitHub
           </motion.button>

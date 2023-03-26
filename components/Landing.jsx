@@ -99,7 +99,7 @@ const Landing = () => {
           whileHover={{
             y: [0, -5, 0],
             transition: {
-              duration: 1,
+              duration: 0.7,
               repeat: Infinity,
             },
           }}

@@ -25,7 +25,7 @@ const projects = [
     description: `Designed and developed a basic react website for a local small business. I utilized Tailwind CSS for all of the styling and took advantage of AWS for all hosting and DNS requirements.`,
     github: 'https://github.com/JusticeMatthew/BCpestcontrol',
     projectLink: 'https://www.bandcpestcontrol.com/',
-    stack: ['React', 'Tailwind', 'AWS'],
+    stack: ['React', 'Tailwind CSS', 'AWS'],
   },
 ];
 

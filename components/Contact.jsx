@@ -58,23 +58,22 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full h-[100vh] flex justify-end items-center flex-col"
+      className="w-full h-[100vh] flex justify-center items-center flex-col"
     >
-      <h1 className="text-2xl mb-4 ">Contact</h1>
-      <div className="w-12 h-[4px] bg-green rounded mb-10 border-2 border-green" />
-      <div className="lg:w-[550px] md:w-1/2 w-3/4 h-80">
+      <div className="absolute w-full h-full bg-contact bg-cover opacity-[0.04]" />
+      <div className="lg:w-[550px] md:w-1/2 w-3/4 h-80 z-10 mt-72">
         <motion.form
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.5 }}
           id="messageForm"
-          className="w-full mt-10 h-[300px]"
+          className="w-full"
           ref={form}
           autoComplete="nope"
         >
           <div className="grid grid-cols-1 gap-4 mb-4">
             <textarea
-              className="p-4 outline-none w-full rounded-md focus:ring-2 focus:ring-green bg-gray-100/10 h-44 placeholder:text-sm"
-              placeholder="Message"
+              className="p-4 outline-none w-full rounded-md focus:ring-2 focus:ring-green bg-gray-100/10 h-64 placeholder:text-sm"
+              placeholder="Send me a message"
               name="message"
               value={value.message}
               onChange={handleChange}
@@ -140,16 +139,16 @@ const Contact = () => {
           </div>
         </motion.form>
       </div>
-      <div className="md:mt-48 mt-40 block md:mb-20 mb-20">
+      <div className="mt-auto block mb-10 z-10">
         <a href="https://github.com/JusticeMatthew" target="_blank">
           <GithubFilled
-            style={{ fontSize: '60px' }}
+            style={{ fontSize: '2rem' }}
             className="mr-10 hover:text-green"
           />
         </a>
         <a href="https://www.linkedin.com/in/justicematthew/" target="_blank">
           <LinkedinFilled
-            style={{ fontSize: '60px' }}
+            style={{ fontSize: '2rem' }}
             className="hover:text-green"
           />
         </a>
