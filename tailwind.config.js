@@ -13,6 +13,7 @@ module.exports = {
       backgroundImage: {
         papyrus: "url('/papyrus-dark.webp')",
         contact: "url('/ContactBG.png')",
+        contactSmall: "url('/ContactBGsmall.png')",
       },
     },
   },

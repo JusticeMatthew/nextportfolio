@@ -1,24 +1,18 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
-import {
-  motion,
-  AnimatePresence,
-  useInView,
-  useAnimation,
-} from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import {
   LinkedinFilled,
   GithubFilled,
   CheckSquareFilled,
   CloseSquareFilled,
+  CodeFilled,
+  YoutubeFilled,
 } from '@ant-design/icons';
 
 const Contact = () => {
   const form = useRef();
-  const popupRef = useRef();
-  const isInView = useInView(popupRef);
-  const popupControls = useAnimation();
 
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
@@ -39,16 +33,9 @@ const Contact = () => {
     hidden: { top: 200, opacity: 0 },
     out: {
       opacity: 0,
-      top: 200,
-      transition: { duration: 0.3 },
+      transition: { duration: 0.2 },
     },
   };
-
-  useEffect(() => {
-    if (isInView) {
-      popupControls.start('start');
-    }
-  }, [popupControls, isInView]);
 
   const handleChange = (e) => {
     setValue({
@@ -89,6 +76,7 @@ const Contact = () => {
       className="w-full h-[100vh] flex justify-center items-center flex-col"
     >
       <div className="absolute w-full h-full bg-contact bg-cover opacity-[0.04]" />
+      <div className="absolute w-full h-full bg-contactSmall bg-cover opacity-75" />
       <div className="lg:w-[550px] md:w-1/2 w-3/4 h-80 mt-72 z-[2]">
         <motion.form
           whileInView={{ opacity: [0, 1] }}
@@ -167,50 +155,85 @@ const Contact = () => {
           </div>
         </motion.form>
       </div>
-      <div className="mt-auto block mb-10 z-50">
-        <a href="https://github.com/JusticeMatthew" target="_blank">
+      <div className="mt-auto block mb-10 z-50 opacity-90 flex">
+        <a
+          href="https://github.com/JusticeMatthew"
+          target="_blank"
+          className="mx-2"
+        >
           <GithubFilled
             style={{ fontSize: '2rem' }}
-            className="mr-10 hover:text-green"
+            className=" hover:text-green"
           />
         </a>
-        <a href="https://www.linkedin.com/in/justicematthew/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/justicematthew/"
+          target="_blank"
+          className="mx-1"
+        >
           <LinkedinFilled
             style={{ fontSize: '2rem' }}
             className="hover:text-green"
           />
         </a>
+        <a
+          href="https://www.youtube.com/@dawncasting"
+          target="_blank"
+          className="mx-2"
+        >
+          <YoutubeFilled
+            style={{ fontSize: '2rem' }}
+            className="hover:text-green"
+          />
+        </a>
+        <a
+          href="https://github.com/JusticeMatthew/nextportfolio"
+          target="_blank"
+          className="mx-1"
+        >
+          <div className="group">
+            <span className="group-hover:visible transition-opacity bg-neutral-800 p-2 text-sm text-gray-100 rounded-sm absolute translate-y-[-40px] invisible">
+              Source Code
+            </span>
+            <CodeFilled
+              style={{ fontSize: '2rem' }}
+              className="hover:text-green"
+            />
+          </div>
+        </a>
       </div>
       <div className="w-full h-[80vh] absolute flex justify-center">
         <AnimatePresence>
-          <motion.div
-            key="popup"
-            ref={popupRef}
-            variants={popupVariants}
-            initial={'hidden'}
-            animate={popupControls}
-            exit={'out'}
-            className={`${
-              success ? 'visible' : 'hidden'
-            } bg-[#262626] text-white text-sm flex items-center px-2 pr-4 absolute top-20 z-[1]`}
-          >
-            {console.log(isInView)}
-            <CheckSquareFilled className="text-4xl p-1 pb-[7px] mr-2 text-green" />
-            <p>Message sent</p>
-          </motion.div>
+          {success && (
+            <motion.div
+              key="popup"
+              variants={popupVariants}
+              initial={'hidden'}
+              animate={'start'}
+              exit={'out'}
+              className="bg-[#262626] text-white text-sm flex items-center px-2 pr-4 absolute top-20 z-[1]"
+            >
+              <CheckSquareFilled className="text-4xl p-1 pb-[7px] mr-2 text-green" />
+              <p>Message sent</p>
+            </motion.div>
+          )}
+          {failure && (
+            <motion.div
+              key="popup"
+              variants={popupVariants}
+              initial={'hidden'}
+              animate={'start'}
+              exit={'out'}
+              className="bg-[#262626] text-white text-sm flex items-center px-2 pr-4 absolute top-20 z-[1]"
+            >
+              <CloseSquareFilled className="text-4xl p-1 pb-[7px] mr-2 text-red-500" />
+              <p className="text-center text-xs">
+                Oh no! Something went wrong. <br />
+                Please contact me directly at matthewajustice@gmail.com
+              </p>
+            </motion.div>
+          )}
         </AnimatePresence>
-        <div
-          className={`${
-            failure ? 'visible' : 'invisible'
-          } bg-gray-100/10 text-white text-sm flex items-center px-2 pr-4 absolute`}
-          role="alert"
-        >
-          <CloseSquareFilled className="text-4xl p-1 md:pb-[7px] mr-2 text-red-500" />
-          <p className="text-center text-xs">
-            There was a problem. Please contact me directly at
-            matthewajustice@gmail.com
-          </p>
-        </div>
       </div>
     </div>
   );
