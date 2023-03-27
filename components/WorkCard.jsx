@@ -11,7 +11,7 @@ const WorkCard = ({
   stack,
 }) => {
   return (
-    <div className="w-[350px] h-[435px] bg-[#0f0f0f] border-[1px] border-black/0 rounded-3xl flex flex-col items-center justify-between bg-papyrus bg-repeat z-50 relative">
+    <div className="w-[350px] h-[435px] bg-[#0f0f0f] border-[1px] border-black/0 rounded-3xl flex flex-col items-center justify-between bg-papyrus bg-repeat relative z-[1]">
       <div className="flex justify-center items-center flex-col">
         <img
           src={img}

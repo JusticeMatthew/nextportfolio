@@ -27,7 +27,7 @@ const Work = () => {
             stack={project.stack}
           />
         ))}
-        <div className="absolute w-full h-full overflow-hidden flex items-center justify-center flex-col z-0 cursor-default invisible lg:visible lg:max-[1146px]:invisible">
+        <div className="absolute w-full h-full overflow-hidden flex items-center justify-center flex-col cursor-default invisible lg:visible lg:max-[1146px]:invisible z-auto">
           <p className="text-[22rem] opacity-[0.04] text-gray-500 font-bold">
             PROJECTS
           </p>

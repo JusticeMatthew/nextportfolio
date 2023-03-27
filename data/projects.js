@@ -15,7 +15,7 @@ const projects = [
     description: `BudBud is an app I designed to assist medical marijuana patients with tracking information about their medicine. During the course of building
     this I taught myself React Native, Firebase, and Firestore.`,
     github: 'https://github.com/JusticeMatthew/budbudv7',
-    projectLink: 'https://expo.dev/@justicematthew/BudBud',
+    projectLink: 'https://photos.app.goo.gl/QWDbyTWY2CMdSSVA9',
     stack: ['React Native', 'Firebase', 'Firestore'],
   },
   {
