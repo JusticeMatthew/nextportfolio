@@ -10,12 +10,6 @@ import {
   YoutubeFilled,
 } from '@ant-design/icons';
 
-import {
-  socialStyles,
-  inputStyles,
-  labelStyles,
-} from '../constants/contactFormStyles';
-
 const Contact = () => {
   const form = useRef();
 
@@ -106,14 +100,17 @@ const Contact = () => {
               <input
                 type="text"
                 id="floating_name"
-                className={inputStyles}
+                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-neutral-800 rounded-lg appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green focus:outline-none focus:ring-0 focus:border-green peer"
                 placeholder=" "
                 name="from_name"
                 value={value.from_name}
                 onChange={handleChange}
                 autoComplete="nope"
               />
-              <label htmlFor="floating_name" className={labelStyles}>
+              <label
+                htmlFor="floating_name"
+                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-green  peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 cursor-text"
+              >
                 Name
               </label>
             </div>
@@ -121,14 +118,17 @@ const Contact = () => {
               <input
                 type="text"
                 id="floating_email"
-                className={inputStyles}
+                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-neutral-800 rounded-lg appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green focus:outline-none focus:ring-0 focus:border-green peer"
                 placeholder=" "
                 name="reply_to"
                 value={value.reply_to}
                 onChange={handleChange}
                 autoComplete="nope"
               />
-              <label htmlFor="floating_email" className={labelStyles}>
+              <label
+                htmlFor="floating_email"
+                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-green  peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 cursor-text"
+              >
                 Email
               </label>
             </div>
@@ -160,7 +160,10 @@ const Contact = () => {
           target="_blank"
           className="mx-2"
         >
-          <GithubFilled style={{ fontSize: '2rem' }} className={socialStyles} />
+          <GithubFilled
+            style={{ fontSize: '2rem' }}
+            className="hover:text-green transition-ease duration-300"
+          />
         </a>
         <a
           href="https://www.linkedin.com/in/justicematthew/"
@@ -169,7 +172,7 @@ const Contact = () => {
         >
           <LinkedinFilled
             style={{ fontSize: '2rem' }}
-            className={socialStyles}
+            className="hover:text-green transition-ease duration-300"
           />
         </a>
         <a
@@ -179,7 +182,7 @@ const Contact = () => {
         >
           <YoutubeFilled
             style={{ fontSize: '2rem' }}
-            className={socialStyles}
+            className="hover:text-green transition-ease duration-300"
           />
         </a>
         <a
@@ -191,7 +194,10 @@ const Contact = () => {
             <span className="group-hover:visible transition-ease-in bg-neutral-800 p-2 text-sm text-gray-100 rounded-sm absolute translate-y-[-40px] invisible duration-300">
               Source Code
             </span>
-            <CodeFilled style={{ fontSize: '2rem' }} className={socialStyles} />
+            <CodeFilled
+              style={{ fontSize: '2rem' }}
+              className="hover:text-green transition-ease duration-300"
+            />
           </div>
         </a>
       </div>
