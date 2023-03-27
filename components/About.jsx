@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import ThreeBox from './ThreeBox';
 
 const About = () => {
   return (
@@ -8,21 +9,20 @@ const About = () => {
       id="about"
       className="w-full flex justify-center items-center flex-col bg-papyrus bg-repeat h-[100vh] lg:pt-64 pb-72 pt-32"
     >
-      <h1 className="text-2xl mb-4">About Me</h1>
-      <div className="w-12 h-[4px] bg-green rounded mb-20 border-2 border-green" />
+      {/* <ThreeBox /> */}
       <div className="flex justify-center items-center flex-col">
         <motion.div
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.5 }}
           className="lg:w-[850px] h-80 flex justify-between w-full lg:flex-row items-center flex-col"
         >
-          <div className="w-[300px] h-[300px] bg-green z-0 rounded-full">
+          <div className="avatar">
             <Image
               src="/matthew.jpg"
               alt="Matthew Justice"
-              width="250"
-              height="250"
-              className="rounded-md z-50"
+              width={300}
+              height={300}
+              className="image avatar_image"
             />
           </div>
           <div className="flex justify-center items-center flex-col lg:mt-0 mt-12">

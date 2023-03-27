@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import {
   LinkedinFilled,
   GithubFilled,
@@ -10,6 +9,12 @@ import {
   CodeFilled,
   YoutubeFilled,
 } from '@ant-design/icons';
+
+import {
+  socialStyles,
+  inputStyles,
+  labelStyles,
+} from '../constants/contactFormStyles';
 
 const Contact = () => {
   const form = useRef();
@@ -23,7 +28,6 @@ const Contact = () => {
   });
 
   const validInputs = !value.message || !value.reply_to || !value.from_name;
-  const socialStyles = 'hover:text-green transition-ease duration-300';
 
   const popupVariants = {
     start: {
@@ -78,7 +82,7 @@ const Contact = () => {
     >
       <div className="absolute w-full h-full bg-contact bg-cover opacity-[0.04]" />
       <div className="absolute w-full h-full bg-contactSmall bg-cover opacity-75" />
-      <div className="lg:w-[550px] md:w-1/2 w-3/4 h-80 mt-72 z-[2]">
+      <div className="lg:w-[550px] md:w-1/2 w-3/4 h-80 sm:mt-72 mt-60 z-[2]">
         <motion.form
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.5 }}
@@ -102,17 +106,14 @@ const Contact = () => {
               <input
                 type="text"
                 id="floating_name"
-                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-neutral-800 rounded-lg appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green focus:outline-none focus:ring-0 focus:border-green peer"
+                className={inputStyles}
                 placeholder=" "
                 name="from_name"
                 value={value.from_name}
                 onChange={handleChange}
                 autoComplete="nope"
               />
-              <label
-                htmlFor="floating_name"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-green  peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 cursor-text"
-              >
+              <label htmlFor="floating_name" className={labelStyles}>
                 Name
               </label>
             </div>
@@ -120,17 +121,14 @@ const Contact = () => {
               <input
                 type="text"
                 id="floating_email"
-                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-neutral-800 rounded-lg  appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green focus:outline-none focus:ring-0 focus:border-green peer"
+                className={inputStyles}
                 placeholder=" "
                 name="reply_to"
                 value={value.reply_to}
                 onChange={handleChange}
                 autoComplete="nope"
               />
-              <label
-                htmlFor="floating_email"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-50 origin-[0] px-2 peer-focus:px-2 peer-focus:text-green  peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 cursor-text"
-              >
+              <label htmlFor="floating_email" className={labelStyles}>
                 Email
               </label>
             </div>
@@ -156,7 +154,7 @@ const Contact = () => {
           </div>
         </motion.form>
       </div>
-      <div className="mt-auto block mb-10 z-50 opacity-90 flex">
+      <div className="mt-auto block sm:mb-10 mb-5 z-50 opacity-90 flex">
         <a
           href="https://github.com/JusticeMatthew"
           target="_blank"
@@ -190,7 +188,7 @@ const Contact = () => {
           className="mx-1"
         >
           <div className="group">
-            <span className="group-hover:visible transition-ease-in-out bg-neutral-800 p-2 text-sm text-gray-100 rounded-sm absolute translate-y-[-40px] invisible duration-300">
+            <span className="group-hover:visible transition-ease-in bg-neutral-800 p-2 text-sm text-gray-100 rounded-sm absolute translate-y-[-40px] invisible duration-300">
               Source Code
             </span>
             <CodeFilled style={{ fontSize: '2rem' }} className={socialStyles} />
