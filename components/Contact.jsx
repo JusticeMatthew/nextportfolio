@@ -23,6 +23,7 @@ const Contact = () => {
   });
 
   const validInputs = !value.message || !value.reply_to || !value.from_name;
+  const socialStyles = 'hover:text-green transition-ease duration-300';
 
   const popupVariants = {
     start: {
@@ -161,10 +162,7 @@ const Contact = () => {
           target="_blank"
           className="mx-2"
         >
-          <GithubFilled
-            style={{ fontSize: '2rem' }}
-            className=" hover:text-green"
-          />
+          <GithubFilled style={{ fontSize: '2rem' }} className={socialStyles} />
         </a>
         <a
           href="https://www.linkedin.com/in/justicematthew/"
@@ -173,7 +171,7 @@ const Contact = () => {
         >
           <LinkedinFilled
             style={{ fontSize: '2rem' }}
-            className="hover:text-green"
+            className={socialStyles}
           />
         </a>
         <a
@@ -183,7 +181,7 @@ const Contact = () => {
         >
           <YoutubeFilled
             style={{ fontSize: '2rem' }}
-            className="hover:text-green"
+            className={socialStyles}
           />
         </a>
         <a
@@ -192,13 +190,10 @@ const Contact = () => {
           className="mx-1"
         >
           <div className="group">
-            <span className="group-hover:visible transition-opacity bg-neutral-800 p-2 text-sm text-gray-100 rounded-sm absolute translate-y-[-40px] invisible">
+            <span className="group-hover:visible transition-ease-in-out bg-neutral-800 p-2 text-sm text-gray-100 rounded-sm absolute translate-y-[-40px] invisible duration-300">
               Source Code
             </span>
-            <CodeFilled
-              style={{ fontSize: '2rem' }}
-              className="hover:text-green"
-            />
+            <CodeFilled style={{ fontSize: '2rem' }} className={socialStyles} />
           </div>
         </a>
       </div>

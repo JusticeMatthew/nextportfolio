@@ -36,7 +36,7 @@ const WorkCard = ({
           <motion.button
             whileHover={{
               y: -3,
-              transition: { duration: 0.1 },
+              transition: { duration: 0.2 },
             }}
             type="button"
             className="bg-midGray inline-block text-md rounded-sm text-whitesmoke px-3 p-2 cursor-pointer mx-4 border-2 border-midGray hover:text-green hover:border-b-green"
@@ -48,7 +48,7 @@ const WorkCard = ({
           <motion.button
             whileHover={{
               y: -3,
-              transition: { duration: 0.1 },
+              transition: { duration: 0.2 },
             }}
             type="button"
             className="border-midGray bg-black border-2 inline-block text-md rounded-sm text-white px-3 p-2 cursor-pointer mx-4 hover:border-b-green hover:text-green"

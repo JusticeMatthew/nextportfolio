@@ -67,7 +67,7 @@ const Header = () => {
           {['home', 'projects', 'about', 'contact'].map((item, index) => (
             <div
               key={index}
-              className="px-4 flex flex-col justify-center items-center hover:text-green transition ease duration-500 cursor-pointer"
+              className="px-4 flex flex-col justify-center items-center hover:text-green transition ease duration-400 cursor-pointer"
             >
               <Link
                 activeClass="active"

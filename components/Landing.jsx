@@ -65,7 +65,7 @@ const Landing = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="bg-green text-black px-6 py-2 m-4 rounded-sm font-bold text-md hover:border-green hover:text-white hover:bg-black border-black/0 hover:border-green border-2 cursor-pointer"
+            className="bg-green text-black px-6 py-2 m-4 rounded-sm font-bold text-md hover:border-green hover:text-white hover:bg-black border-black/0 hover:border-green border-2 cursor-pointer transition-ease duration-500"
           >
             My Work
           </Link>
@@ -76,7 +76,7 @@ const Landing = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="hover:bg-green hover:text-black border-b-2 border-green px-6 py-2 rounded-sm m-4 text-md cursor-pointer"
+            className="hover:bg-green hover:text-black border-b-2 border-green px-6 py-2 rounded-sm m-4 text-md cursor-pointer transition-ease duration-500"
           >
             Contact
           </Link>
