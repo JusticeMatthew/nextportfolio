@@ -23,7 +23,7 @@ const Landing = () => {
   return (
     <div
       id="home"
-      className="flex justify-center items-center flex-col pt-64 bg-papyrus bg-repeat h-[100vh] pb-72"
+      className="flex justify-center items-center flex-col pt-64 bg-papyrus bg-repeat h-screen pb-72"
     >
       <div className="w-full flex justify-center items-center">
         {hello.map((item, index) => (
@@ -49,7 +49,7 @@ const Landing = () => {
         <motion.p
           animate={{ opacity: [0, 1] }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="text-sm text-center text-gray-300"
+          className="mt-5 text-sm text-center text-gray-300"
         >
           I'm Matthew. I'm a front-end developer and I love
           <br /> building beautiful user-centric web experiences.
@@ -65,9 +65,9 @@ const Landing = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="bg-green text-black px-6 py-2 m-4 rounded-sm font-bold text-md hover:border-green hover:text-white hover:bg-black border-black/0 hover:border-green border-2 cursor-pointer transition-ease duration-500"
+            className="bg-green text-black px-6 py-2 m-4 rounded-sm font-bold text-md hover:border-green hover:text-white hover:bg-black border-black/0 hover:border-green border-2 cursor-pointer transition-ease duration-500 uppercase"
           >
-            My Work
+            Projects
           </Link>
 
           <Link
@@ -76,7 +76,7 @@ const Landing = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="hover:bg-green hover:text-black border-b-2 border-green px-6 py-2 rounded-sm m-4 text-md cursor-pointer transition-ease duration-500"
+            className="hover:bg-green hover:text-black border-b-2 border-green px-6 py-2 rounded-sm m-4 text-md cursor-pointer transition-ease duration-500 uppercase"
           >
             Contact
           </Link>

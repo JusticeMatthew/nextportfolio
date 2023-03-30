@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import ThreeBox from './ThreeBox';
+// import ThreeBox from './ThreeBox';
 
 const About = () => {
   return (

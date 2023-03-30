@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import WorkCard from './WorkCard';
+import WorkCard from '../components/WorkCard';
 import projects from '../data/projects';
 
 const Work = () => {
