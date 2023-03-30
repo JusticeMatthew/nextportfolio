@@ -51,8 +51,8 @@ const Landing = () => {
           transition={{ duration: 0.5, delay: 1 }}
           className="mt-5 text-sm text-center text-gray-300"
         >
-          I'm Matthew. I'm a front-end developer and I love
-          <br /> building beautiful user-centric web experiences.
+          I'm Matthew. I'm a Front-End Developer & UI/UX Designer <br />
+          and I love building beautiful user-centric web experiences.
         </motion.p>
         <motion.div
           animate={{ opacity: [0, 1] }}

@@ -8,7 +8,7 @@ const Work = () => {
   return (
     <div
       id="projects"
-      className="w-full min-h-[100vh] flex justify-center items-around"
+      className="w-full min-h-screen flex justify-center items-around"
     >
       <motion.div
         whileInView={{ opacity: [0, 1] }}
