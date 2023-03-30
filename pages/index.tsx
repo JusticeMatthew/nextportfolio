@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 
 import { Landing, About, Work, Contact } from '../containers';
-import { ThreeBox } from '../components';
+// import { ThreeBox } from '../components';
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <Work />
         <About />
         <Contact />
-        <ThreeBox />
+        {/* <ThreeBox /> */}
       </div>
     </div>
   );
