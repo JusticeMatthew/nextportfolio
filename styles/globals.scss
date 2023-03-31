@@ -28,11 +28,13 @@ a {
   box-sizing: border-box;
 }
 
+// React-scroll links
 .active {
   color: #15db95;
   transition: 300ms;
 }
 
+// Morphing avatar image
 .avatar {
   min-width: 300px;
   min-height: 300px;

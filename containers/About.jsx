@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full flex justify-center items-center flex-col bg-papyrus bg-repeat h-[100vh] lg:pt-64 pb-72 pt-32"
+      className="w-full flex justify-center items-center flex-col bg-papyrus bg-repeat h-screen lg:pt-64 pb-72 pt-32"
     >
       {/* <ThreeBox /> */}
       <div className="flex justify-center items-center flex-col">

@@ -65,7 +65,7 @@ const Landing = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="bg-green text-black px-6 py-2 m-4 rounded-sm font-bold text-md hover:border-green hover:text-white hover:bg-black border-black/0 hover:border-green border-2 cursor-pointer transition-ease duration-500 uppercase"
+            className="bg-green text-black px-6 py-2 m-4 rounded-sm font-bold text-md hover:text-white hover:bg-black border-black/0 hover:border-green border-2 cursor-pointer transition-ease duration-500 uppercase"
           >
             Projects
           </Link>

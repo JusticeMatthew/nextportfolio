@@ -72,7 +72,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full h-[100vh] flex justify-center items-center flex-col"
+      className="w-full h-screen flex justify-center items-center flex-col"
     >
       <div className="absolute w-full h-full bg-contact bg-cover opacity-[0.04]" />
       <div className="absolute w-full h-full bg-contactSmall bg-cover opacity-75" />
