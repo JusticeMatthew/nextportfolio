@@ -154,7 +154,7 @@ const Contact = () => {
           </div>
         </motion.form>
       </div>
-      <div className="mt-auto block sm:mb-10 mb-5 z-50 opacity-90 flex">
+      <div className="mt-auto sm:mb-10 mb-5 z-50 opacity-90 flex">
         <a
           href="https://github.com/JusticeMatthew"
           target="_blank"

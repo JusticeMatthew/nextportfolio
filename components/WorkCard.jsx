@@ -23,9 +23,11 @@ const WorkCard = ({
           {stack.map((tech, index) => (
             <div
               key={index}
-              className="flex justify-center items-center bg-black w-auto h-6 rounded border-2 border-green mx-1 cursor-default"
+              className="flex justify-center items-center bg-midGray w-auto h-6 rounded border-2 border-white/50 mx-1 cursor-default"
             >
-              <p className="text-[10px] px-2 text-green font-bold">{tech}</p>
+              <p className="text-[9px] px-1 text-white/50 tracking-wider">
+                {tech}
+              </p>
             </div>
           ))}
         </div>
@@ -39,7 +41,7 @@ const WorkCard = ({
               transition: { duration: 0.2 },
             }}
             type="button"
-            className="bg-midGray inline-block text-md rounded-sm text-whitesmoke px-3 p-2 cursor-pointer mx-4 border-2 border-midGray hover:text-green hover:border-b-green"
+            className="bg-green inline-block font-bold text-md rounded-sm text-black px-3 p-2 cursor-pointer mx-4 border-2 border-green"
           >
             Project
           </motion.button>
@@ -51,7 +53,7 @@ const WorkCard = ({
               transition: { duration: 0.2 },
             }}
             type="button"
-            className="border-midGray bg-black border-2 inline-block text-md rounded-sm text-white px-3 p-2 cursor-pointer mx-4 hover:border-b-green hover:text-green"
+            className="border-midGray bg-black border-2 inline-block text-md rounded-sm text-white px-3 p-2 cursor-pointer mx-4 "
           >
             GitHub
           </motion.button>
