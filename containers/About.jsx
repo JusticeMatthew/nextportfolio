@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-// import ThreeBox from './ThreeBox';
 
 const About = () => {
   return (
@@ -9,7 +8,6 @@ const About = () => {
       id="about"
       className="w-full flex justify-center items-center flex-col bg-papyrus bg-repeat h-screen lg:pt-64 pb-72 pt-32"
     >
-      {/* <ThreeBox /> */}
       <div className="flex justify-center items-center flex-col">
         <motion.div
           whileInView={{ opacity: [0, 1] }}

@@ -27,7 +27,7 @@ const Header = () => {
       className="backdrop-blur-md w-full fixed py-4 px-8 z-10 flex sm:justify-evenly justify-between items-center"
     >
       <div className="w-[950px] flex justify-between items-center">
-        <Link to="home" smooth={true} duration={500} offset={-100}>
+        <Link to="home" smooth={true} duration={500}>
           <span className="cursor-pointer font-bold text-4xl uppercase">
             <span className="text-green">M</span>Justice
           </span>

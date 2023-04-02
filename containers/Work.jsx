@@ -13,7 +13,7 @@ const Work = () => {
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.7 }}
-        className="flex justify-center items-center flex-wrap gap-10 my-32 overflow-hidden w-full"
+        className="flex justify-center items-center flex-wrap gap-10 my-32 w-full"
       >
         {projects.map((project, index) => (
           <WorkCard
