@@ -72,11 +72,11 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full h-screen flex justify-center items-center flex-col"
+      className="container mx-auto w-full h-screen flex items-center flex-col"
     >
       <div className="absolute w-full h-full bg-contact bg-cover opacity-[0.04]" />
       <div className="absolute w-full h-full bg-contactSmall bg-cover opacity-75" />
-      <div className="lg:w-[550px] md:w-1/2 w-3/4 h-80 sm:mt-72 mt-60 z-[2]">
+      <div className="lg:w-[550px] md:w-1/2 w-3/4 mt-48 z-[2] flex flex-col items-center justify-between h-full">
         <motion.form
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.5 }}
@@ -153,53 +153,53 @@ const Contact = () => {
             </motion.button>
           </div>
         </motion.form>
-      </div>
-      <div className="mt-auto sm:mb-10 mb-5 z-50 opacity-90 flex">
-        <a
-          href="https://github.com/JusticeMatthew"
-          target="_blank"
-          className="mx-2"
-        >
-          <GithubFilled
-            style={{ fontSize: '2rem' }}
-            className="hover:text-green transition-ease duration-300"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/justicematthew/"
-          target="_blank"
-          className="mx-1"
-        >
-          <LinkedinFilled
-            style={{ fontSize: '2rem' }}
-            className="hover:text-green transition-ease duration-300"
-          />
-        </a>
-        <a
-          href="https://www.youtube.com/@dawncasting"
-          target="_blank"
-          className="mx-2"
-        >
-          <YoutubeFilled
-            style={{ fontSize: '2rem' }}
-            className="hover:text-green transition-ease duration-300"
-          />
-        </a>
-        <a
-          href="https://github.com/JusticeMatthew/nextportfolio"
-          target="_blank"
-          className="mx-1"
-        >
-          <div className="group">
-            <span className="group-hover:visible transition-ease-in bg-neutral-800 p-2 text-sm text-gray-100 rounded-sm absolute translate-y-[-40px] invisible duration-300">
-              Source Code
-            </span>
-            <CodeFilled
+        <div className="sm:mb-10 mb-5 opacity-90 flex">
+          <a
+            href="https://github.com/JusticeMatthew"
+            target="_blank"
+            className="mx-2"
+          >
+            <GithubFilled
               style={{ fontSize: '2rem' }}
               className="hover:text-green transition-ease duration-300"
             />
-          </div>
-        </a>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/justicematthew/"
+            target="_blank"
+            className="mx-1"
+          >
+            <LinkedinFilled
+              style={{ fontSize: '2rem' }}
+              className="hover:text-green transition-ease duration-300"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/@dawncasting"
+            target="_blank"
+            className="mx-2"
+          >
+            <YoutubeFilled
+              style={{ fontSize: '2rem' }}
+              className="hover:text-green transition-ease duration-300"
+            />
+          </a>
+          <a
+            href="https://github.com/JusticeMatthew/nextportfolio"
+            target="_blank"
+            className="mx-1"
+          >
+            <div className="group">
+              <span className="group-hover:visible transition-ease-in bg-neutral-800 p-2 text-sm text-gray-100 rounded-sm absolute translate-y-[-40px] invisible duration-300">
+                Source Code
+              </span>
+              <CodeFilled
+                style={{ fontSize: '2rem' }}
+                className="hover:text-green transition-ease duration-300"
+              />
+            </div>
+          </a>
+        </div>
       </div>
       <div className="w-full h-[80vh] absolute flex justify-center">
         <AnimatePresence>
