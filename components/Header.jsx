@@ -74,7 +74,7 @@ const Header = () => {
                 to={item}
                 spy={true}
                 isDynamic={true}
-                offset={item != 'home' && item != 'contact' ? 1 : 0}
+                offset={item === 'home' ? null : 1}
                 smooth={true}
                 duration={500}
               >
