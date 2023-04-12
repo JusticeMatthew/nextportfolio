@@ -1,9 +1,7 @@
-import { NextPage } from 'next';
 import Head from 'next/head';
-
 import { Landing, About, Work, Contact } from '../containers';
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <div className="mx-auto">
       <Head>
@@ -19,12 +17,4 @@ const Home: NextPage = () => {
       </div>
     </div>
   );
-};
-
-export async function getStaticProps() {
-  return {
-    props: {},
-  };
 }
-
-export default Home;
