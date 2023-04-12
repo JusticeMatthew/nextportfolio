@@ -73,6 +73,8 @@ const Header = () => {
                 activeClass="active"
                 to={item}
                 spy={true}
+                isDynamic={true}
+                offset={item != 'home' ? 1 : 0}
                 smooth={true}
                 duration={500}
               >

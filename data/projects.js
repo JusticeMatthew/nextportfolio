@@ -3,7 +3,7 @@ const projects = [
     img: '/hardstuck.jpg',
     alt: 'budbud logo',
     name: 'Hardstuck',
-    description: `A gaming organization focused on the MMORPG space. The website uses the Twitch & Guild Wars 2 APIs and has a robust template system allowing for rapid page moderation by anyone.`,
+    description: `A gaming organization focused on the MMORPG space. The website uses the Twitch & Guild Wars 2 APIs and has a robust template system allowing for rapid page moderation.`,
     github: 'https://github.com/HardstuckGuild',
     projectLink: 'https://hardstuck.gg/',
     stack: ['JavaScript', 'WordPress', 'MySQL'],
